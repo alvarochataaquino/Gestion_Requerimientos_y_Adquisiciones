@@ -1,0 +1,5 @@
+# Paquetes para compilar Supermix GDI en Windows (incluye el empaquetador).
+# Reutiliza dependencias de ejecución antes de empaquetar.
+-r requirements.txt
+# PyInstaller crea un EXE de ventana a partir de main.py.
+pyinstaller>=6.11,<7

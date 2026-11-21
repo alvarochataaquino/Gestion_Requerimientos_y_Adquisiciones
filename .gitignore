@@ -1,0 +1,11 @@
+# No subir a la entrega o al repositorio archivos temporales y productos de compilacion.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.spec
+.env
+conexion.json
