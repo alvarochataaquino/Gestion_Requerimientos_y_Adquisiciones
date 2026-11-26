@@ -4,7 +4,7 @@
 --   FUNCTION RETURNS TRIGGER: se ejecuta por un evento de la base, no por CALL.
 --   TRIGGER: asocia una funcion al INSERT/UPDATE/DELETE de una tabla.
 --   RAISE EXCEPTION detiene operaciones no validas y revierte la transaccion.
--- SUPERMIX GDI | 03 - PROCEDIMIENTOS, FUNCIONES Y TRIGGERS
+-- APLICATIVO PARA GESTIÓN DE REQUERIMIENTOS Y ADQUISICIONES | 03 - PROCEDIMIENTOS, FUNCIONES Y TRIGGERS
 -- Requiere: 01_creacion_base_datos.sql (y opcionalmente los datos de prueba).
 -- Los procedimientos materializan operaciones del negocio; los triggers protegen
 -- invariantes aun cuando las tablas sean modificadas fuera de la interfaz Python.

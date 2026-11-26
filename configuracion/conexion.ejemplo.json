@@ -1,7 +1,7 @@
 {
   "host": "localhost",
   "port": "5432",
-  "dbname": "supermix_gdi",
+  "dbname": "gestion_adquisiciones",
   "user": "postgres",
   "password": ""
 }

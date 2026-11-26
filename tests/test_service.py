@@ -10,9 +10,9 @@
 import unittest
 from contextlib import contextmanager
 from decimal import Decimal
-from supermix_app.backend.service import Service,validate_code,valid_date,positive_integer,money,CRITERIA
-from supermix_app.backend.database import EXPECTED_TABLES,REQUIRED_PROCEDURES,REQUIRED_TRIGGERS
-from supermix_app.backend.reports import REPORTS
+from gestion_app.backend.service import Service,validate_code,valid_date,positive_integer,money,CRITERIA
+from gestion_app.backend.database import EXPECTED_TABLES,REQUIRED_PROCEDURES,REQUIRED_TRIGGERS
+from gestion_app.backend.reports import REPORTS
 
 # -----------------------------------------------------------------
 # CLASE: FakeCursor

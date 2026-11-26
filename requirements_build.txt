@@ -1,4 +1,4 @@
-# Paquetes para compilar Supermix GDI en Windows (incluye el empaquetador).
+# Paquetes para compilar Aplicativo de Gestión de Requerimientos y Adquisiciones en Windows (incluye el empaquetador).
 # Reutiliza dependencias de ejecución antes de empaquetar.
 -r requirements.txt
 # PyInstaller crea un EXE de ventana a partir de main.py.

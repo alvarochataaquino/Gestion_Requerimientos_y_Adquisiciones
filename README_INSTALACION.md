@@ -1,6 +1,6 @@
-# SUPERMIX GDI — CÓDIGO FUENTE COMPLETO
+# APLICATIVO PARA GESTIÓN DE REQUERIMIENTOS Y ADQUISICIONES — CÓDIGO FUENTE COMPLETO
 
-Software académico de Gestión de Requerimientos y Adquisiciones para el caso Concretos Supermix.
+Software académico de Gestión de Requerimientos y Adquisiciones para el caso la organización.
 
 ## Organización del código
 
@@ -9,7 +9,7 @@ Software académico de Gestión de Requerimientos y Adquisiciones para el caso C
 ├── main.py                         # Punto de entrada
 ├── requirements.txt                # Dependencias de ejecución
 ├── requirements_build.txt          # Dependencias de compilación
-├── supermix_app/
+├── gestion_app/
 │   ├── __init__.py
 │   ├── frontend/
 │   │   ├── __init__.py
@@ -47,7 +47,7 @@ Software académico de Gestión de Requerimientos y Adquisiciones para el caso C
 
 ## Base de datos: instalación en una BD VACÍA
 
-1. En PostgreSQL crea la base de datos `supermix_gdi`.
+1. En PostgreSQL crea la base de datos `gestion_adquisiciones`.
 2. Abre una sesión SQL conectada **a esa base** (por ejemplo, Query Tool en pgAdmin 4).
 3. Ejecuta `base_de_datos/01_creacion_base_datos.sql`.
 4. Si quieres datos de ejemplo, **solo en una base de pruebas vacía**, ejecuta `base_de_datos/02_insercion_datos_prueba.sql` (no repetir).
@@ -69,11 +69,11 @@ O haz doble clic en `scripts/iniciar_desarrollo_windows.bat`.
 
 ## Crear el EXE de un único archivo
 
-En Windows haz doble clic en `scripts/compilar_windows_un_archivo.bat`. Este script ejecuta PyInstaller `--onefile --windowed` y copia el resultado a `../04_Ejecutable/SupermixGDI.exe`. La carpeta 04 incluye el ejecutable `SupermixGDI.exe` listo para abrirlo directamente. No es necesario volver a compilar para ejecutar la versión entregada. Si recompilas, comprueba que el nuevo EXE abra correctamente en Windows. El usuario final no necesita instalar Python, pero sí requiere PostgreSQL operativo y la BD configurada.
+En Windows haz doble clic en `scripts/compilar_windows_un_archivo.bat`. Este script ejecuta PyInstaller `--onefile --windowed` y copia el resultado a `../04_Ejecutable/GestionRequerimientosAdquisiciones.exe`. La carpeta 04 incluye el ejecutable `GestionRequerimientosAdquisiciones.exe` listo para abrirlo directamente. No es necesario volver a compilar para ejecutar la versión entregada. Si recompilas, comprueba que el nuevo EXE abra correctamente en Windows. El usuario final no necesita instalar Python, pero sí requiere PostgreSQL operativo y la BD configurada.
 
 ## Configurar la conexión
 
-Al iniciar selecciona **Configurar PostgreSQL** e introduce host, puerto, base de datos, usuario y contraseña. Comprueba la conexión desde la misma pantalla. El sistema guarda localmente esos datos en `%APPDATA%\SupermixGDI\conexion.json` en Windows, sin incorporarlos al código fuente ni al EXE. Es una configuración local; la contraseña no se cifra. Protege el perfil de Windows y utiliza un rol de BD de privilegios limitados.
+Al iniciar selecciona **Configurar PostgreSQL** e introduce host, puerto, base de datos, usuario y contraseña. Comprueba la conexión desde la misma pantalla. El sistema guarda localmente esos datos en `%APPDATA%\GestionRequerimientosAdquisiciones\conexion.json` en Windows, sin incorporarlos al código fuente ni al EXE. Es una configuración local; la contraseña no se cifra. Protege el perfil de Windows y utiliza un rol de BD de privilegios limitados.
 
 El archivo `configuracion/conexion.ejemplo.json` muestra la estructura de configuración, **pero no contiene credenciales reales**. Consulta `configuracion/CREDENCIALES_PRUEBA.md`.
 
@@ -97,7 +97,7 @@ Estas pruebas validan estructuras, datos de entrada y llamadas a servicios con u
 
 ## Abrir el ejecutable entregado (sin compilar)
 
-En Windows abre `../04_Ejecutable/SupermixGDI.exe`. No hay que usar un iniciador `.cmd` para abrirlo; basta el archivo `.exe`. El programa no instala PostgreSQL automáticamente; configura el servidor y carga los scripts siguiendo las instrucciones anteriores. No requiere internet si PostgreSQL está instalado localmente.
+En Windows abre `../04_Ejecutable/GestionRequerimientosAdquisiciones.exe`. No hay que usar un iniciador `.cmd` para abrirlo; basta el archivo `.exe`. El programa no instala PostgreSQL automáticamente; configura el servidor y carga los scripts siguiendo las instrucciones anteriores. No requiere internet si PostgreSQL está instalado localmente.
 
 **Validación externa pendiente:** verificar el inicio del `.exe`, conexión real y operaciones CRUD en otra computadora Windows.
 
@@ -114,4 +114,4 @@ En Windows abre `../04_Ejecutable/SupermixGDI.exe`. No hay que usar un iniciador
 **Nota sobre el EXE incluido:** el ejecutable original se conserva sin modificaciones. Como fue compilado antes de renombrar los SQL, sus avisos internos pueden citar los nombres antiguos; usa los nombres de archivos nuevos que aparecen en esta guia. Para incorporar los textos nuevos al propio EXE, recompila en Windows mediante `scripts/compilar_windows_un_archivo.bat` y vuelve a probarlo.
 
 
-Para entender cada campo de `conexion.ejemplo.json`, lee `configuracion/GUIA_CONEXION.md`. Las consultas SQL de informes están integradas en `supermix_app/backend/reports.py`.
+Para entender cada campo de `conexion.ejemplo.json`, lee `configuracion/GUIA_CONEXION.md`. Las consultas SQL de informes están integradas en `gestion_app/backend/reports.py`.

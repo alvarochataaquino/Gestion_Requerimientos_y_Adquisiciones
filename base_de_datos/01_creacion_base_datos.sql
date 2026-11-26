@@ -3,8 +3,8 @@
 --   CREATE TABLE define entidades; PRIMARY KEY impide identificadores duplicados.
 --   REFERENCES materializa las relaciones; CHECK evita valores fuera de dominio.
 --   Los indices facilitan búsquedas; no sustituyen las reglas de negocio.
--- SUPERMIX GDI | 01 - CREACION DE LA BASE DE DATOS (MODELO FISICO)
--- Motor: PostgreSQL. Ejecutar sobre una base de datos nueva, por ejemplo supermix_gdi.
+-- APLICATIVO PARA GESTIÓN DE REQUERIMIENTOS Y ADQUISICIONES | 01 - CREACION DE LA BASE DE DATOS (MODELO FISICO)
+-- Motor: PostgreSQL. Ejecutar sobre una base de datos nueva, por ejemplo gestion_adquisiciones.
 -- Objetivo: crear las 12 tablas, relaciones, restricciones y los indices de acceso.
 -- IMPORTANTE: este script no hace CREATE DATABASE. Primero crear la BD en pgAdmin.
 -- Recomendacion: no ejecutarlo dos veces sobre las mismas tablas sin restablecer la BD.

@@ -4,13 +4,13 @@
 
 El programa lee la configuración con `json.loads` de la biblioteca estándar de Python. **JSON estándar no admite comentarios** con `//`, `#` ni `/* ... */`: agregarlos impediría cargar la configuración. Por eso se conserva un ejemplo válido y se explica aquí, campo por campo.
 
-El archivo `conexion.ejemplo.json` es únicamente una **plantilla de referencia**; no se carga automáticamente durante el inicio. La aplicación almacena los datos que el usuario introduce en la pantalla «Configurar PostgreSQL» en `%APPDATA%\SupermixGDI\conexion.json` (Windows). Este último archivo se crea durante el primer guardado.
+El archivo `conexion.ejemplo.json` es únicamente una **plantilla de referencia**; no se carga automáticamente durante el inicio. La aplicación almacena los datos que el usuario introduce en la pantalla «Configurar PostgreSQL» en `%APPDATA%\GestionRequerimientosAdquisiciones\conexion.json` (Windows). Este último archivo se crea durante el primer guardado.
 
 | Campo | Ejemplo | Explicación |
 | --- | --- | --- |
 | `host` | `localhost` | Nombre o IP del equipo donde escucha PostgreSQL. `localhost` significa el mismo equipo donde se abre la aplicación. |
 | `port` | `5432` | Puerto TCP configurado para PostgreSQL. La aplicación comprueba que esté entre 1 y 65535. Puede variar según la instalación. |
-| `dbname` | `supermix_gdi` | Nombre **exacto** de la base que contiene las doce tablas, procedimientos y triggers del proyecto. No es lo mismo que el nombre del servidor registrado en pgAdmin. |
+| `dbname` | `gestion_adquisiciones` | Nombre **exacto** de la base que contiene las doce tablas, procedimientos y triggers del proyecto. No es lo mismo que el nombre del servidor registrado en pgAdmin. |
 | `user` | `postgres` | Rol de PostgreSQL autorizado a conectarse y operar en la base. `postgres` es solo un ejemplo de usuario administrador; en uso real conviene un rol con permisos mínimos. |
 | `password` | `""` | Contraseña asignada al rol en el servidor. Vacío significa que el ejemplo **no proporciona credenciales reales**; cada instalación requiere su propia contraseña. |
 
@@ -26,7 +26,7 @@ El archivo `conexion.ejemplo.json` es únicamente una **plantilla de referencia*
 ## Seguridad y recomendaciones
 
 - No escribas contraseñas reales en el ejemplo que subes al repositorio o al ZIP.
-- La versión actual guarda la contraseña local **sin cifrado**. Restringe el acceso al perfil del usuario de Windows y no compartas `%APPDATA%\SupermixGDI\conexion.json`.
+- La versión actual guarda la contraseña local **sin cifrado**. Restringe el acceso al perfil del usuario de Windows y no compartas `%APPDATA%\GestionRequerimientosAdquisiciones\conexion.json`.
 - El ejecutable no instala PostgreSQL ni crea automáticamente la base: el servidor y sus scripts deben estar preparados primero.
 - pgAdmin 4 es una herramienta para administrar PostgreSQL; no reemplaza el servicio de base de datos.
 - Esta documentación describe la configuración del proyecto, no una conexión verificada en otra computadora.

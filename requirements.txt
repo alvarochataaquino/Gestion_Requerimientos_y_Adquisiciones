@@ -1,3 +1,3 @@
-# Paquetes para la ejecucion de Supermix GDI.
+# Paquetes para la ejecucion de Aplicativo de Gestión de Requerimientos y Adquisiciones.
 # Driver de PostgreSQL usado por backend/database.py (conexión, SQL y transacciones).
 psycopg2-binary>=2.9.9,<3

@@ -7,7 +7,7 @@
 
 """Punto de entrada para ejecutar con python main.py o PyInstaller onefile."""
 import tkinter as tk
-from supermix_app.frontend.ui import SupermixApp
+from gestion_app.frontend.ui import GestionApp
 
 # Esta guarda evita abrir una ventana al importar el modulo desde otras herramientas.
 if __name__ == '__main__':
@@ -16,6 +16,6 @@ if __name__ == '__main__':
     # Evita tamaños que ocultarían formularios o la barra lateral.
     root.minsize(1050, 700)
     # Construye todos los elementos visuales sobre la misma ventana raíz.
-    SupermixApp(root)
+    GestionApp(root)
     # El bucle atiende eventos hasta que el usuario cierra la aplicacion.
     root.mainloop()

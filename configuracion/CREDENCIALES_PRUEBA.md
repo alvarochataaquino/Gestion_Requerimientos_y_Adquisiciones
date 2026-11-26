@@ -8,7 +8,7 @@ Para probarlo, crea o utiliza una instalación local de PostgreSQL que controles
 |---|---|
 | Host | `localhost` (si PostgreSQL corre en tu equipo) |
 | Puerto | `5432` (si no lo modificaste) |
-| Base | `supermix_gdi` |
+| Base | `gestion_adquisiciones` |
 | Usuario | Usuario de PostgreSQL que hayas creado o autorizado |
 | Contraseña | Contraseña asignada a ese usuario (no incluida en el ZIP) |
 
